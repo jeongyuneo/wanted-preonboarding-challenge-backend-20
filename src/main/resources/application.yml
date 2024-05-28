@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: wanted-preonboarding-challenge-backend-20
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true

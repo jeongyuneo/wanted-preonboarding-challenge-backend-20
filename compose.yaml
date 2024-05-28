@@ -1,0 +1,11 @@
+services:
+  mysql:
+    image: 'mysql:latest'
+    container_name: 'wanted-mysql'
+    environment:
+      - 'MYSQL_DATABASE=wanted-preonboarding'
+      - 'MYSQL_PASSWORD=wanted-preonboarding-20'
+      - 'MYSQL_ROOT_PASSWORD=wanted-preonboarding-20'
+      - 'MYSQL_USER=jeongyuneo'
+    ports:
+      - '3306:3306'
