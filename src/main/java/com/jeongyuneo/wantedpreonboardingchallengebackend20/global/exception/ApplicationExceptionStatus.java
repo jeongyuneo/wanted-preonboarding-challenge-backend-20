@@ -10,6 +10,7 @@ public enum ApplicationExceptionStatus {
 
     UNAUTHORIZED(HttpStatus.UNAUTHORIZED, "600", "인증되지 않은 사용자입니다."),
     FORBIDDEN(HttpStatus.FORBIDDEN, "601", "허용되지 않은 요청입니다."),
+    UNSUPPORTED_CONTENT_TYPE(HttpStatus.BAD_REQUEST, "602", "지원하지 않는 컨텐트 타입입니다."),
 
     USER_NOT_FOUND(HttpStatus.BAD_REQUEST, "700", "회원을 찾을 수 없습니다."),
 

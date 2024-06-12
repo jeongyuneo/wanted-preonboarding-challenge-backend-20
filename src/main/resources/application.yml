@@ -8,3 +8,11 @@ spring:
       hibernate:
         format_sql: true
         show_sql: true
+
+zoneId: Asia/Seoul
+
+jwt:
+  secretKey: ajo1832sS1fiGloi9287Ajh3y98S13u23udy6fo20344thdgfik?GHgsh2leyDSiglwb2y47
+
+cookie:
+  domain: localhost

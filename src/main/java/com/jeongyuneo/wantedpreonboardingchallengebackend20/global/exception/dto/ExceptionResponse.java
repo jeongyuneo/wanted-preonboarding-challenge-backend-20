@@ -27,6 +27,16 @@ public record ExceptionResponse(
         );
     }
 
+    public static ExceptionResponse of(HttpServletRequest request, ApplicationExceptionStatus exception, String zoneId) {
+        return new ExceptionResponse(
+                request.getMethod(),
+                request.getRequestURI(),
+                exception.getCode(),
+                exception.getMessage(),
+                ZonedDateTime.of(LocalDateTime.now(), ZoneId.of(zoneId)).format(DateTimeFormatter.ISO_OFFSET_DATE_TIME)
+        );
+    }
+
     public static ExceptionResponse internalServerError(HttpServletRequest request, String zoneId) {
         return new ExceptionResponse(
                 request.getMethod(),
