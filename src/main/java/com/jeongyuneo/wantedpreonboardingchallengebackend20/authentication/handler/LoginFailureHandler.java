@@ -1,10 +1,8 @@
 package com.jeongyuneo.wantedpreonboardingchallengebackend20.authentication.handler;
 
-import com.jeongyuneo.wantedpreonboardingchallengebackend20.authentication.service.AuthenticationService;
 import com.jeongyuneo.wantedpreonboardingchallengebackend20.global.converter.JsonConverter;
 import com.jeongyuneo.wantedpreonboardingchallengebackend20.global.exception.ApplicationExceptionStatus;
 import com.jeongyuneo.wantedpreonboardingchallengebackend20.global.exception.dto.ExceptionResponse;
-import com.jeongyuneo.wantedpreonboardingchallengebackend20.user.service.UserReadService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
@@ -18,9 +16,6 @@ import java.nio.charset.StandardCharsets;
 
 @RequiredArgsConstructor
 public class LoginFailureHandler extends SimpleUrlAuthenticationFailureHandler {
-
-    private final AuthenticationService authenticationService;
-    private final UserReadService userReadService;
 
     @Value("${cookie.domain}")
     private String cookieDomain;
